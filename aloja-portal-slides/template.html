@@ -117,6 +117,75 @@ URL: https://code.google.com/p/io-2012-slides
       <img src="images/screenshots/counters.jpeg" style="width: 80%;"></img>
     </article>
   </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Infrastructure</h2>
+    </hgroup>
+    <article>
+      <ul>
+	<li>Web server and database server: Windows Azure VM running Ubuntu Server 12.04 LTS</li>
+        <li>Nginx web server</li> 
+        <li>Varnish cache to catch requests and in practical matters transform the page into a static web page</li>
+        <li>
+          Software caches:
+	  <ul>
+            <li>Query cache (query MD5) => store results in a file.</li>
+            <li>Dynamic HTML cache (twig template cache) => Generate HTML with dynamic data and store the result.</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+     <h2>Infrastructure (II)</h2>
+    </hgroup>
+    <article>
+      <img src="images/infrastructure.jpg" style="width: 80%;"></img>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+        <h2>Web performance benchmarks</h2>
+    </hgroup>
+    <article>
+       <p>Benchmarks using apache benchmark (ab) with 10.000 requests, 50 max concurrent, requesting benchmark executions data.<br /><br />Retrieving executions data:</p>
+       <table>
+         <thead>
+            <th>Average # requests per second</th>
+            <th>Average time to serve requests</th>
+            <th>Standard deviation to serve requests</th>
+            <th>Median</th>
+         </thead>
+         <tbody>
+            <td>25</td>
+            <td>1516 ms</td>
+            <td>1996 ms</td>
+            <td>495 ms</td>
+         </tbody>
+       </table>
+       <br />
+       <p>Retrieving executions front-page (it is done concurrently to retrieving data):</p>
+       <table>
+         <thead>
+            <th>Average # requests per second</th>
+            <th>Average time to serve requests</th>
+            <th>Standard deviation to serve requests</th>
+            <th>Median</th>
+         </thead>
+         <tbody>
+            <td>216.46</td>
+            <td>178 ms</td>
+            <td>230 ms</td>
+            <td>240 ms</td>
+         </tbody>
+       </table>
+    </article>
+  </slide>
+
   <!--slide>
     <hgroup>
       <h2>Slide with Bullets that Build</h2>
