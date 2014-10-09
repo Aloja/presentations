@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Aloja web application',
-    subtitle: 'Results visualization tool',
+    title: 'ALOJA-WEB',
+    subtitle: 'Hadoop benchmarks repository and analytics tool',
    /* eventInfo: {
       title: 'Serbia MDCS',
       date: '14/10/2014'
