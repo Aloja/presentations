@@ -70,7 +70,28 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
       <p>This sections presents the benchmark execution repository. It features more than 4000 executions and counting. <br />
        This tool allows you to browse, filter, search, and select distinct executions to compare and analyse its execution details. <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/benchexecs">http://hadoop.bsc.es/benchexecs</a></p>
-      <img src="images/screenshots/datatable.jpeg" style="width: 90%;"></img>
+      <img src="images/screenshots/datatable.jpeg" style="display: block; margin: 0 auto; width: 90%;"></img>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Hadoop Job Counters</h2>
+    </hgroup>
+    <article>
+      <p>The Hadoop Job Counters sections allows to browse the counters output at each of the Hadoop executions, filter them, and to order by a specific counter the selected runs (or all).
+        <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/counters">http://hadoop.bsc.es/counters</a></p>
+      <img src="images/screenshots/counters.jpeg" style="display: block; margin: 0 auto; width: 80%;"></img>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Overall Best Configuration</h2>
+    </hgroup>
+    <article>
+      <p>This section allows the user to see the best configuration found for a given benchmark. It also allows to find it filtering some parameters such as kind of cluster, number of mappers, block size, etcetera.</p>
+      <img src="images/screenshots/bestconfig.jpeg" style="display: block; margin: 0 auto; width: 90%;"></img>
     </article>
   </slide>
 
@@ -81,7 +102,7 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
       <p> The Configuration Improvement sections evaluates the SPEED-UP improvement by different Hardware and Software configurations of the Hadoop executions.
 	The page allows to filter and group results according to their execution configurations. <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/benchexecs">http://hadoop.bsc.es/configimprovement</a></p>
-      <img src="images/screenshots/configimprovement.png" style="width: 45%;"></img>
+      <img src="images/screenshots/configimprovement.png" style="display: block; margin: 0 auto; width: 45%;"></img>
     </article>
   </slide>
 
@@ -92,35 +113,52 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
       <p> The Cost/Performance evaluation tool, presents a cloud of points of the different Hadoop executions and evaluates the cost-effectiveness of both
         <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/costperfeval">http://hadoop.bsc.es/costperfeval</a></p>
-      <img src="images/screenshots/costs.jpeg" style="width: 45%;"></img>
+      <img src="images/screenshots/costs.jpeg" style="display: block; margin: 0 auto; width: 45%;"></img>
     </article>
   </slide>
 
   <slide>
+    <hgroup>
+      <h2>Parameter Evaluation</h2>
+    </hgroup>
+    <article>
+      <p> The Parameter Evaluation presents a column chart to see how much time it took executions to ran for each possible value of a selected parameter. In the
+	picture an example of how the number of mappers affect the execution time is given.
+        <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/parameval">http://hadoop.bsc.es/parameval</a></p>
+      <img src="images/screenshots/parameval.jpg" style="display: block; margin: 0 auto; width: 80%;"></img>
+    </article>
+  </slide>
+
+  <slide>
+    <aside class="note">
+      <section>
+	<a href="http://hadoop.bsc.es/perfcharts?random=1">Example</a>
+      </section>
+    </aside>
     <hgroup>
       <h2>Performance Charts</h2>
     </hgroup>
     <article>
       <p>The Performance Charts sections allows first to get a visual glance at the full Hadoop execution of the selected runs by analyzing each of the Hadoop phases: map, merge, shuffle, and reduce.
         <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/perfcharts?random=1">http://hadoop.bsc.es/perfcharts</a></p>
-      <img src="images/screenshots/charts1.jpeg" style="width: 60%;"></img>
+      <img src="images/screenshots/charts1.jpeg" style="display: block; margin: 0 auto; width: 60%;"></img>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Hadoop Job Counters</h2>
+      <h2>Performance Metrics</h2>
     </hgroup>
     <article>
-      <p>The Hadoop Job Counters sections allows to browse the counters output at each of the Hadoop executions, filter them, and to order by a specific counter the selected runs (or all). 
-        <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/counters">http://hadoop.bsc.es/counters</a></p>
-      <img src="images/screenshots/counters.jpeg" style="width: 80%;"></img>
+       <p>The Performance Metrics section shows all the performance metrics collected during benchmark's executions, allowing the user to see how many CPU, Network, I/O and Memory was used.
+       <br /><a style="font-size: .7em;" href="http://hadoop.bsc.es/metrics">http://hadoop.bsc.es/metrics</a></p>
+       <img src="images/screenshots/perfmetrics.jpg" style="display: block; margin: 0 auto; width: 100%;"></img>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Infrastructure</h2>
+      <h2>Hardware Infrastructure</h2>
     </hgroup>
     <article>
       <ul>
@@ -143,7 +181,26 @@ URL: https://code.google.com/p/io-2012-slides
      <h2>Infrastructure (II)</h2>
     </hgroup>
     <article>
-      <img src="images/infrastructure.jpg" style="width: 80%;"></img>
+      <img src="images/infrastructure.jpg" style="display: block; margin: 0 auto; width: 80%;"></img>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+     <h2>Application Deployment</h2>
+    </hgroup>
+    <article>
+	<p>Two main tools are used:</p>
+	<ul>
+	  <li><b>Vagrant:</b> it automatically creates or start/stop virtual machines and its configuration.</p>
+	  <li><b>Puppet:</b> given a machine, it allows to define which software have to be installed, and how it has to be configured,
+	    without the need of having huge scripts doing that. At the same time it checks or updates stages already done. It is a very useful abstraction layer.</li>
+        </ul>
+        <p>How this is used to deploy local or cloud environments:</p>
+	<ul>
+	  <li><b>Local:</b> vagrant + puppet to deploy on Ubuntu 13.04 VM</li>
+	  <li><b>Azure:</b> custom deployment tools + puppet</li>
+	</ul>
     </article>
   </slide>
 
