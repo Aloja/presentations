@@ -87,7 +87,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Overall Best Configuration</h2>
+      <h2>Best Configuration</h2>
     </hgroup>
     <article>
       <p>This section allows the user to see the best configuration found for a given benchmark. It also allows to find it filtering some parameters such as kind of cluster, number of mappers, block size, etcetera.</p>
@@ -158,6 +158,23 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
+      <h2>Software technologies</h2>
+    </hgroup>
+    <article>
+        <ul>
+          <li>PHP 5.5 + MySQL</li>
+          <li>Javascript + CSS3 + HTML5</li>
+        </ul>
+        <p>Frameworks &amp; tools used</p>
+        <ul>
+          <li><b>Front-side</b>: <ul><li>Twitter bootstrap front-end framework</li><li>Twig templates</li><li>Highcharts</li><li>Datatables</li></ul></li>
+          <li><b>Server-side</b>: <ul><li>Custom micro-framework</li><li>Pimple dependency-injection<li>Monolog logger</li></ul></li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
       <h2>Hardware Infrastructure</h2>
     </hgroup>
     <article>
@@ -196,9 +213,9 @@ URL: https://code.google.com/p/io-2012-slides
 	  <li><b>Puppet:</b> given a machine, it allows to define which software have to be installed, and how it has to be configured,
 	    without the need of having huge scripts doing that. At the same time it checks or updates stages already done. It is a very useful abstraction layer.</li>
         </ul>
-        <p>How this is used to deploy local or cloud environments:</p>
+        <p>This tools altogether allows us to set up servers from scratch in an automatized way. A production-ready server is currently created and setted up in 5 minutes.<br /> This is done in two ways depending on the environment:</p>
 	<ul>
-	  <li><b>Local:</b> vagrant + puppet to deploy on Ubuntu 13.04 VM</li>
+	  <li><b>Local:</b> vagrant + puppet to deploy on Ubuntu Server 12.04 VM</li>
 	  <li><b>Azure:</b> custom deployment tools + puppet</li>
 	</ul>
     </article>
